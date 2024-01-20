@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "This is a repository for notes put together by students at Monash University.",
   "scripts": {
-    "build": "mkdir dist && pandoc ./src/input.md -o ./dist/output.pdf",
+    "build": "pandoc ./src/input.md -o ./dist/output.pdf",
     "clean": "rm -f ./dist/output.pdf",
     "format": "prettier --write ./src/input.md",
     "open": "open ./dist/output.pdf -a Preview || xdg-open ./dist/output.pdf"

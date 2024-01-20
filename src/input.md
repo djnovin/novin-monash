@@ -20,6 +20,10 @@ tags:
     - [Lab 1: Network Simulation](#lab-1-network-simulation)
     - [Lab 2: Linux Environment and Linux Command Line](#lab-2-linux-environment-and-linux-command-line)
   - [Module 2](#module-2)
+    - [Topic 1: Physical Layer](#topic-1-physical-layer)
+    - [Topic 2: Data Link Layer](#topic-2-data-link-layer)
+    - [Topic 3: LAN and wireless LAN](#topic-3-lan-and-wireless-lan)
+  - [Module 3](#module-3)
 
 ## Module 1
 
@@ -382,3 +386,5 @@ chgrp <group_name> <file_name>
 ### Topic 2: Data Link Layer
 
 ### Topic 3: LAN and wireless LAN
+
+
