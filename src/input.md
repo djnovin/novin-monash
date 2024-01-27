@@ -21,6 +21,13 @@ tags:
     - [Lab 2: Linux Environment and Linux Command Line](#lab-2-linux-environment-and-linux-command-line)
   - [Module 2](#module-2)
     - [Topic 1: Physical Layer](#topic-1-physical-layer)
+      - [Network Topologies](#network-topologies)
+      - [Mediums for Transmission](#mediums-for-transmission)
+      - [Transmission of Digital Signals](#transmission-of-digital-signals)
+      - [Attenuation](#attenuation)
+      - [Encapsulation and Decapsulation](#encapsulation-and-decapsulation)
+      - [Transmission Media](#transmission-media)
+      - [Analog and Digital Signals](#analog-and-digital-signals)
     - [Topic 2: Data Link Layer](#topic-2-data-link-layer)
     - [Topic 3: LAN and wireless LAN](#topic-3-lan-and-wireless-lan)
   - [Module 3](#module-3)
@@ -48,7 +55,7 @@ tags:
 
 ```
 
-2. Assembly Language
+2.Assembly Language
 
 - English-like abbreviations representing elementary computer operations
   (translated to machine language by an assembler)
@@ -60,7 +67,7 @@ mov eax, 0x00000000
 
 ```
 
-3. High-Level Language
+3.High-Level Language
 
 #### C
 
@@ -322,7 +329,139 @@ chgrp <group_name> <file_name>
 
 ### Topic 1: Physical Layer
 
+#### Network Topologies
+
+##### Bus Topology
+
+- All devices are connected to a single cable that runs from one end of the
+  network to the other.
+
+##### Ring Topology
+
+- All devices are connected to one another in the shape of a closed loop, so
+  that each device is connected directly to two other devices, one on either
+  side of it.
+
+##### Star Topology
+
+- All devices are connected to a central device, called a hub or a switch.
+
+##### Mesh Topology
+
+- All devices are connected to one another so that there is a direct connection
+  between every pair of devices.
+
+##### Tree Topology
+
+- All devices are connected to a central device, called a hub or a switch, which
+  is then connected to other central devices.
+
+##### Hybrid Topology
+
+- A combination of two or more topologies.
+
+#### Mediums for Transmission
+
+##### Coaxial Cable (Coax)
+
+- A single copper wire surrounded by insulation, a braided metal shield, and a
+  plastic outer layer.
+
+##### Fiber Optic Cable
+
+- A cable that uses light to transmit data.
+
+##### Twisted Pair Cable
+
+- A cable that consists of two copper wires twisted around each other.
+
+#### Transmission of Digital Signals
+
+##### Baseband Transmission
+
+- A transmission technique that uses a single channel for data.
+
+##### Broadband Transmission
+
+- A transmission technique that uses multiple channels for data.
+
+##### Transmission Impairments
+
+#### Attenuation
+
+##### Understanding Attenuation
+
+- **What:** A `reduction` in the energy of a signal.
+
+- **Why:** The `law of conservation` of energy states that energy cannot be
+  created or destroyed, only transformed. As a signal travels through a medium,
+  some of its energy is transformed into heat as a result of `resistance` in the
+  medium. This causes the signal to lose energy, which is known as attenuation.
+
+- **How:** `Decibels` (dB) are used to measure the amount of attenuation in a
+  signal. The higher the number of decibels, the greater the attenuation. We can
+  calculate the amount of attenuation in a signal using the following formula:
+
+  ```markdown
+  dB = 10 \* log(P1/P2)
+  ```
+
+  Where:
+
+  - `P1` is the power of the original signal. (Watts)
+  - `P2` is the power of the attenuated signal. (Watts)
+
+- **Example:** A signal with a power of 10 watts is attenuated to 5 watts. How
+  many decibels of attenuation does the signal have?
+
+  ```markdown
+  dB = 10 _ log(10/5) dB = 10 _ log(2) dB = 10 \* 0.301 dB = 3.01
+  ```
+
+##### Distortion
+
+When a signal is transmitted through a medium, it is distorted. This distortion
+is caused by the medium's inability to transmit the signal perfectly. There are
+several types of distortion that can occur:
+
+1. Dispersion
+2. Frequency - Related Distortion
+3. Nonlineararity
+4. Noise
+5. Limited Bandwidth
+6. Interference
+7. Impulse Response
+
+##### Noise
+
+- An unwanted signal that interferes with the transmitted signal.
+
+1. Thermal Noise
+2. Induced Noise
+3. Crosstalk
+4. Impulse Noise
+
+##### Signal-to-Noise Ratio (SNR)
+
+- A ratio of the noise that is wanted to the noise that is unwanted.
+- The higher the SNR, the better the quality of the signal.
+- The lower the SNR, the worse the quality of the signal.
+
+##### Calculating SNR
+
+```markdown
+SNR = Average Signal Power / Average Noise Power
+```
+
+Where:
+
+- `Average Signal Power` is the average power of the signal. (Watts)
+- `Average Noise Power` is the average power of the noise. (Watts)
+
 #### Encapsulation and Decapsulation
+
+- Encapsulation is the process of adding a header to a message.
+- Decapsulation is the process of removing a header from a message.
 
 #### Transmission Media
 
@@ -387,4 +526,152 @@ chgrp <group_name> <file_name>
 
 ### Topic 3: LAN and wireless LAN
 
+## Module 3
 
+### Topic 1
+
+#### Networks and Subnets
+
+A network is a group of devices connected together to share resources. A subnet
+is a group of devices connected together on the same network.
+
+- A network is identified by its network address.
+- A subnet is identified by its subnet mask.
+
+Typically organizations buy a block of IP addresses from an Internet Service
+Provider (ISP). The ISP allocates a network address and a subnet mask to the
+organization.
+
+- Example: Monash University has a network address of `130.194.0.0/16.`
+
+The organization then allocates a subnet address and a subnet mask to each
+subnet on the network.
+
+- Subnets roughly correspond to LANs (Local Area Networks). Thus, you can
+  imagine a subnet as a region of a network.
+
+##### Anology
+
+- Network: PostCode
+- Subnet: Street
+- Device (Host ID): Building Number
+
+#### IP `Internet Protocol`
+
+##### IPv6 `Internet Protocol version 6`
+
+IPv6 is the most recent version (1998) of the Internet Protocol, the
+communications protocol that provides an identification and location system for
+computers on networks and routes traffic across the Internet. IPv6 was developed
+by the Internet Engineering Task Force to deal with the long-anticipated problem
+of IPv4 address exhaustion. To put this into perspective, under IPv4 there are
+232 possible combinations, which offers just under 4.3 billion unique addresses.
+Under IPv6, there are 2128 possible combinations, or 340 undecillion unique
+addresses.
+
+IPv6 addresses are 128-bit IP address written in hexadecimal and separated by
+colons. An example of an IPv6 address is
+`2001:0db8:85a3:0000:0000:8a2e:0370:7334`.
+
+Typical allocation of IPv6 address space:
+
+- IANA + RIR: /23
+- ISPs (9 Bits): /32
+- Company/Organization (16bits): /48
+- Subnets (16bits): /64
+- Interface ID (64 bits): /128
+
+##### Configuring IP Address
+
+Every device on a network needs an IP address to communicate with other devices.
+IP addresses are usually assigned by a DHCP server. However, you can also
+manually configure IP addresses on a device.
+
+- Doesn't change for servers and routers so you must manually configure them
+  with a static IP address.
+- Probably doesn't need to change for workstations but configuring them with a
+  static IP address is a lot of work.
+- Infeasible for mobile devices to have a static IP address so they are
+  configured with a dynamic IP address.
+
+Dynamic Host Configuration Protocol (DHCP) is a network management protocol used
+on Internet Protocol (IP) networks for automatically assigning IP addresses and
+other communication parameters to devices connected to the network using a
+client-server architecture.
+
+- Send broadcast message to DHCP server to get an address and subnet mask.
+- Addresses are only leased for a limited time.
+- Makes efficient use of limited IPv4 address space.
+- Much easier for admins to manage than static addresses.
+
+Dynamic addressing in IPv6 is handled by a different protocol called Stateless
+Address Autoconfiguration (SLAAC). SLAAC is a method for configuring IPv6
+addresses on a device without using a DHCP server.
+
+- Uses a combination of the device's MAC address and the network prefix to
+  generate a unique IPv6 address.
+- This is called an EUI-64 address.
+- EUI-64 stands for Extended Unique Identifier.
+- It is a method for assigning a unique 64-bit address to a device.
+- It is used in IPv6 and IEEE 802 networks.
+- The first 24 bits of an EUI-64 address are the same as the OUI of the device's
+  MAC address.
+- The last 40 bits are generated from the device's MAC address and the network
+  prefix.
+- The network prefix is the first 64 bits of the IPv6 address.
+
+Send a multicast message to the network prefix to get the network prefix and
+subnet mask.
+
+- The network prefix is usually provided by a router advertisement message from
+  a router on the network.
+- The router advertisement message also provides the network prefix to other
+  devices on the network.
+
+Autoconfiguration in IPv6 is handled by a different protocol called Neighbor
+Discovery Protocol (NDP). NDP is a protocol in the Internet protocol suite used
+with Internet Protocol Version 6 (IPv6). It operates at the link layer of the
+Internet model (RFC 1122), and is responsible for address autoconfiguration of
+nodes, discovery of other nodes on the link, determining the addresses of other
+nodes, duplicate address detection, finding available routers and Domain Name
+System (DNS) servers, address prefix discovery, and maintaining reachability
+information of other active neighbor nodes.
+
+- Advertised prefix + self-generated interface ID = IPv6 address.
+- Check for duplicate addresses using Duplicate Address Detection (DAD).
+
+### Topic 2: Application Layer
+
+#### HTTP `HyperText Transfer Protocol`
+
+The Hypertext Transfer Protocol is an application layer protocol for
+distributed, collaborative, hypermedia information systems. HTTP is the
+foundation of data communication for the World Wide Web.
+
+#### Electronic Mail
+
+SMTP: Simple Mail Transfer Protocol
+
+POP3: Post Office Protocol
+
+IMAP: Internet Message Access Protocol
+
+#### Telnet and SSH
+
+#### Other Applications
+
+FTP: File Transfer Protocol
+
+IM: Instant Messaging
+
+## Module 5
+
+### Topic 1: Network Security
+
+### Topic 2: VPNs
+
+## Module 6
+
+### Topic 1: Backbone Networks and WAN/MAN
+
+### Topic 3: The Internet
