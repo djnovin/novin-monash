@@ -1,0 +1,3 @@
+const constellationTable = [
+  { symbol: <symbol here>, frequency: <frequency here>, amplitude: <amplitude here>, phase: <phase here> },
+]
